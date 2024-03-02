@@ -1,7 +1,6 @@
-import aiFrequency from "./ai-frequency.svg";
+import aiFrequency from "./ai-frequency.png";
+import aiFrequencyWhite from "./ai-frequency-white.png";
 import check from "./check.svg";
-import aiFrequencySymbol from "./ai-frequency-symbol.svg";
-import aiFrequencyWhiteSymbol from "./ai-frequency-symbol-white.svg";
 import play from "./play.svg";
 import gradient from "./gradient.png";
 import smallSphere from "./4-small.png";
@@ -77,11 +76,10 @@ import twitter from "./socials/twitter.svg";
 
 export {
   aiFrequency,
+  aiFrequencyWhite,
   check,
   check2,
   loading1,
-  aiFrequencySymbol,
-  aiFrequencyWhiteSymbol,
   play,
   gradient,
   smallSphere,
