@@ -1,20 +1,31 @@
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
-import { aiFrequency } from "../assets/";
-import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
+import { aiFrequency } from "../assets/";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { HamburgerMenu } from "../components/design/Header";
+import { navigation } from "../constants";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
-    setOpenNavigation(!openNavigation);
+    if (openNavigation) {
+      setOpenNavigation(false);
+      enablePageScroll();
+    } else {
+      setOpenNavigation(true);
+      disablePageScroll();
+    }
   };
 
   const handleClick = () => {
+    // if closed, forbid clicking
+    if (!openNavigation) return;
+
+    enablePageScroll();
     setOpenNavigation(false);
   };
 
@@ -39,7 +50,7 @@ const Header = () => {
 
         <nav
           className={`${openNavigation ? "flex" : "hidden"}
-          fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          fixed top-[6rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
