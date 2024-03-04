@@ -44,6 +44,7 @@ const Header = () => {
             width={60}
             height={40}
             alt="AI Frequency Logo"
+            className="rounded-full"
           />
           <p className="ml-3 font-extrabold text-2xl">AI Frequency</p>
         </a>
