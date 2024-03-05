@@ -1,6 +1,7 @@
 import Section from "./Section";
 import Heading from "./Heading";
-import { service1 } from "../assets";
+import { check, service1 } from "../assets";
+import { aiFrequencyServices } from "../constants";
 
 const Services = () => {
   return (
@@ -21,6 +22,21 @@ const Services = () => {
                 alt="Robot profile"
                 className="w-full h-full object-cover md:object-right"
               />
+            </div>
+
+            <div className="relative z-1 max-w-[17rem] ml-auto">
+              <h4 className="h4 mb-4">Smartest AI</h4>
+              <p className="body-2 mb-[3rem] text-n-3">
+                AI Frequency unlocks the potential of AI-powered applications
+              </p>
+              <ul className="body-2">
+                {aiFrequencyServices.map((item, index) => (
+                  <li key={index} className="flex items-start py-4 border-t border-n-6">
+                    <img src={check} width={24} height={24} />
+                    <p className="ml-4">{item}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
