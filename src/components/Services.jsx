@@ -2,6 +2,7 @@ import Section from "./Section";
 import Heading from "./Heading";
 import { check, service1 } from "../assets";
 import { aiFrequencyServices } from "../constants";
+import Generating from "./Generating";
 
 const Services = () => {
   return (
@@ -31,13 +32,18 @@ const Services = () => {
               </p>
               <ul className="body-2">
                 {aiFrequencyServices.map((item, index) => (
-                  <li key={index} className="flex items-start py-4 border-t border-n-6">
+                  <li
+                    key={index}
+                    className="flex items-start py-4 border-t border-n-6"
+                  >
                     <img src={check} width={24} height={24} />
                     <p className="ml-4">{item}</p>
                   </li>
                 ))}
               </ul>
             </div>
+
+            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg:right-auto lg:bottom-8 lg:-translate-x-1/2" />
           </div>
         </div>
       </div>
