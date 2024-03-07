@@ -70,4 +70,4 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 ## <a name="live">🔗 Live Website</a>
 
-- https://ai-frequency.dev
+- react-tailwind-vite-ai-frequency-website.pages.dev
