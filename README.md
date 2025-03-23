@@ -32,8 +32,7 @@ and many more, including code architecture and reusability
 
 ## <a name="live">🔗 Live Website</a>
 
-- https://www.ai-frequency.website/
-
+- https://b7ef5619.react-tailwind-vite-ai-frequency-website.pages.dev
 ## <a name="quick-start">🤸 Quick Start</a>
 
 Follow these steps to set up the project locally on your machine.
